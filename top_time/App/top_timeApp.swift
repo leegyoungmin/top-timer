@@ -82,7 +82,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc private func stopTimer() {
-        timerStatusViewModel.resetTimer()
+        timerStatusViewModel.resetTimer(isCancel: true)
     }
 }
 
