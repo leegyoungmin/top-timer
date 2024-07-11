@@ -9,7 +9,7 @@ import SwiftUI
 
 // VIEWS
 struct TimeSettingView: View {
-    @State private var timerDuration: Int = 1800
+    @State private var timerDuration: Int = 1810
     @State private var text: String = ""
     
     var body: some View {
@@ -18,10 +18,10 @@ struct TimeSettingView: View {
                 .textFieldStyle(.roundedBorder)
             
             Picker("타이머 시간", selection: $timerDuration) {
-                Text("15 분").tag(900)
-                Text("30 분").tag(1800)
-                Text("1 시간").tag(3600)
-                Text("1시간 30분").tag(5400)
+                Text("15 분").tag(910)
+                Text("30 분").tag(1810)
+                Text("1 시간").tag(3610)
+                Text("1시간 30분").tag(5410)
             }
             .pickerStyle(.segmented)
             

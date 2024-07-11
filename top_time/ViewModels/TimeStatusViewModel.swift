@@ -17,24 +17,20 @@ class TimeStatusViewModel: ObservableObject {
     private var timer: Timer?
     
     func setTitle(with new: String) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.title = "💖 " + new
-        }
+        self.title = "💖 " + new
     }
     
     func updateShowTitle(timeValue: String) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.showTitle = self.title + " " + timeValue
-        }
+        self.showTitle = self.title + " " + timeValue
     }
     
     func setTimer(with time: Int) {
         secondRemain = time
         totalSecond = time
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            
             if self.secondRemain > 0 {
                 self.secondRemain -= 1
                 self.updateProgress()
@@ -61,25 +57,14 @@ class TimeStatusViewModel: ObservableObject {
     
     private func updateProgress() {
         let progress = 1.0 - (Double(secondRemain) / Double(totalSecond))
-        print(secondRemain)
-        
-        DispatchQueue.main.async {
-            self.remainProgress = max(progress, 0)
-            print(self.remainProgress)
-        }
+        self.remainProgress = max(progress, 0)
     }
     
     private func updateRemainTimeValue() {
         let hour = secondRemain / 3600
         let minutes = (secondRemain % 3600) / 60
-        let seconds = (secondRemain % 3600) % 60
         
-        let remainTimeValue = String(
-            format: "%02d:%02d:%02d",
-            hour,
-            minutes,
-            seconds
-        )
+        let remainTimeValue = String(format: "%02d:%02d", hour, minutes)
         
         updateShowTitle(timeValue: remainTimeValue)
     }
