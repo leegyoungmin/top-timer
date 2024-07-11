@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5435F532C3F6C3300AC6940 /* TimeStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5435F522C3F6C3300AC6940 /* TimeStatusViewModel.swift */; };
+		A5435F552C3F6C5000AC6940 /* TimerSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5435F542C3F6C5000AC6940 /* TimerSettingView.swift */; };
+		A5435F572C3F6D6A00AC6940 /* TimeStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5435F562C3F6D6A00AC6940 /* TimeStatusView.swift */; };
 		A5EFDD1A2C3E14EA003782FA /* top_timeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFDD192C3E14EA003782FA /* top_timeApp.swift */; };
-		A5EFDD1C2C3E14EA003782FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EFDD1B2C3E14EA003782FA /* ContentView.swift */; };
 		A5EFDD1E2C3E14EA003782FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EFDD1D2C3E14EA003782FA /* Assets.xcassets */; };
 		A5EFDD212C3E14EA003782FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5EFDD202C3E14EA003782FA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5435F522C3F6C3300AC6940 /* TimeStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatusViewModel.swift; sourceTree = "<group>"; };
+		A5435F542C3F6C5000AC6940 /* TimerSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingView.swift; sourceTree = "<group>"; };
+		A5435F562C3F6D6A00AC6940 /* TimeStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStatusView.swift; sourceTree = "<group>"; };
 		A5EFDD162C3E14EA003782FA /* top_time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = top_time.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5EFDD192C3E14EA003782FA /* top_timeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = top_timeApp.swift; sourceTree = "<group>"; };
-		A5EFDD1B2C3E14EA003782FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A5EFDD1D2C3E14EA003782FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5EFDD202C3E14EA003782FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A5EFDD222C3E14EA003782FA /* top_time.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = top_time.entitlements; sourceTree = "<group>"; };
@@ -33,6 +37,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5435F502C3F6C2300AC6940 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5435F542C3F6C5000AC6940 /* TimerSettingView.swift */,
+				A5435F562C3F6D6A00AC6940 /* TimeStatusView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A5435F512C3F6C2A00AC6940 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A5435F522C3F6C3300AC6940 /* TimeStatusViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A5435F582C3F9DAE00AC6940 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A5EFDD192C3E14EA003782FA /* top_timeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		A5EFDD0D2C3E14EA003782FA = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +81,9 @@
 		A5EFDD182C3E14EA003782FA /* top_time */ = {
 			isa = PBXGroup;
 			children = (
-				A5EFDD192C3E14EA003782FA /* top_timeApp.swift */,
-				A5EFDD1B2C3E14EA003782FA /* ContentView.swift */,
+				A5435F582C3F9DAE00AC6940 /* App */,
+				A5435F512C3F6C2A00AC6940 /* ViewModels */,
+				A5435F502C3F6C2300AC6940 /* Views */,
 				A5EFDD1D2C3E14EA003782FA /* Assets.xcassets */,
 				A5EFDD222C3E14EA003782FA /* top_time.entitlements */,
 				A5EFDD1F2C3E14EA003782FA /* Preview Content */,
@@ -139,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5EFDD1C2C3E14EA003782FA /* ContentView.swift in Sources */,
+				A5435F532C3F6C3300AC6940 /* TimeStatusViewModel.swift in Sources */,
 				A5EFDD1A2C3E14EA003782FA /* top_timeApp.swift in Sources */,
+				A5435F552C3F6C5000AC6940 /* TimerSettingView.swift in Sources */,
+				A5435F572C3F6D6A00AC6940 /* TimeStatusView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = top_time/top_time.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -279,12 +312,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.timeline.top-time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -298,6 +333,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = top_time/top_time.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -306,12 +342,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.timeline.top-time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
